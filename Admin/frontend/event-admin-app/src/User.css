@@ -1,0 +1,34 @@
+.table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .thead-dark th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .response-form {
+    margin-top: 20px;
+  }
+  
+  .response-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .response-form .form-group {
+    margin-bottom: 15px;
+  }
+  .original-message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  .alert-success {
+    margin-top: 10px;
+  }
+  
+  
+  
