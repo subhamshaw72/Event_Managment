@@ -24,7 +24,7 @@ function Updateabout() {
 
   const getProductDetails = async (id) => {
     try {
-      const res = await fetch(`http://localhost:8000/Aboutserver/getaboutById/${id}`);
+      const res = await fetch(`https://event-managment-admin-backend-1.onrender.com/Aboutserver/getaboutById/${id}`);
       const data = await res.json();
       setName(data.name);
      
@@ -76,7 +76,7 @@ function Updateabout() {
         body: JSON.stringify(product)
       };
 
-      const response = await fetch(`http://localhost:8000/Aboutserver/updateAbout/${pid}`, requestOptions);
+      const response = await fetch(`https://event-managment-admin-backend-1.onrender.com/Aboutserver/updateAbout/${pid}`, requestOptions);
       const data = await response.json();
 
       if (data._id != null) {

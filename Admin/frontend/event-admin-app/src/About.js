@@ -43,7 +43,7 @@ function About() {
         };
 
         try {
-            const response = await axios.post('http://localhost:8000/Aboutserver/upload_About', product, {
+            const response = await axios.post('https://event-managment-admin-backend-1.onrender.com/Aboutserver/upload_About', product, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

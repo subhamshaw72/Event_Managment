@@ -9,7 +9,7 @@ function AddProduct() {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const res = await axios.get('http://localhost:8000/Bookserver/getAllbooking');
+                const res = await axios.get('https://event-managment-admin-backend-1.onrender.com/Bookserver/getAllbooking');
                 setBookings(res.data);
             } catch (error) {
                 console.error('Error fetching bookings:', error);

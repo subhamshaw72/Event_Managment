@@ -10,7 +10,7 @@ const ManageEvent = () => {
     const navigate = useNavigate(); 
 
     const getAllProducts = async () =>{
-        const response = await fetch('http://localhost:8000/Manage/getAllProducts');
+        const response = await fetch('https://event-managment-admin-backend-1.onrender.com/Manage/getAllProducts');
         const data = await response.json()
 
         console.log(10, data)
@@ -34,7 +34,7 @@ const ManageEvent = () => {
                 headers: { 'Content-Type': 'application/json' }
             };
     
-            const response = await fetch(`http://localhost:8000/Manage/delete_product/${id}`, requestOptions);
+            const response = await fetch(`https://event-managment-admin-backend-1.onrender.com/Manage/delete_product/${id}`, requestOptions);
             const data = await response.json();
         
             window.location.href = ""; 

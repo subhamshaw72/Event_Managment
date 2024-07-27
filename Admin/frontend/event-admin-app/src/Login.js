@@ -16,7 +16,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:8000/adminserver/Loginadmin', {
+    axios.post('https://event-managment-admin-backend-1.onrender.com/adminserver/Loginadmin', {
       email: email,
       password: password,
     })
@@ -34,7 +34,7 @@ function Login() {
   const requestPasswordReset = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/adminserver/requestUpdatePassword', {
+      const response = await fetch('https://event-managment-admin-backend-1.onrender.com/adminserver/requestUpdatePassword', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -57,7 +57,7 @@ function Login() {
   const resetPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/adminserver/updatePassword', {
+      const response = await fetch('https://event-managment-admin-backend-1.onrender.com/adminserver/updatePassword', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp, newPassword })

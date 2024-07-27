@@ -44,7 +44,7 @@ function AddEvent() {
         };
 
         try {
-            const response = await axios.post('http://localhost:8000/Manage/upload_product', product, {
+            const response = await axios.post('https://event-managment-admin-backend-1.onrender.com/Manage/upload_product', product, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

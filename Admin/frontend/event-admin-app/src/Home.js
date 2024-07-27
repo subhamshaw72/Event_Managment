@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch total number of users
-    axios.get('http://localhost:8000/userserver/getAlluser')
+    axios.get('https://event-managment-admin-backend-1.onrender.com/userserver/getAlluser')
       .then(response => {
         const totalUsers = response.data.length;
         setUserData({ totalUsers });
@@ -21,7 +21,7 @@ const Home = () => {
       });
 
     // Fetch total number of bookings
-    axios.get('http://localhost:8000/Bookserver/getAllbooking')
+    axios.get('https://event-managment-admin-backend-1.onrender.com/Bookserver/getAllbooking')
       .then(response => {
         const totalBookings = response.data.length;
         setBookingData({ totalBookings });
@@ -44,7 +44,7 @@ const Home = () => {
       });
 
     // Fetch total number of events from backend
-    axios.get('http://localhost:8000/Manage/getAllProducts2')
+    axios.get('https://event-managment-admin-backend-1.onrender.com/Manage/getAllProducts2')
       .then(response => {
         const { totalEvents } = response.data;
         setTotalEvents(totalEvents);

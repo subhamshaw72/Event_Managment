@@ -11,7 +11,7 @@ const ManageProduct = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:8000/userserver/getAlluser');
+                const response = await fetch('https://event-managment-admin-backend-1.onrender.com/userserver/getAlluser');
                 const data = await response.json();
                 setUsers(data);
             } catch (error) {
@@ -31,7 +31,7 @@ const ManageProduct = () => {
                     headers: { 'Content-Type': 'application/json' }
                 };
 
-                const response = await fetch(`http://localhost:8000/userserver/deleteuser/${id}`, requestOptions);
+                const response = await fetch(`https://event-managment-admin-backend-1.onrender.com/userserver/deleteuser/${id}`, requestOptions);
                 const data = await response.json();
 
                 setUsers(users.filter(user => user._id !== id));

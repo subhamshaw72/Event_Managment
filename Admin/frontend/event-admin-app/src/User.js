@@ -11,7 +11,7 @@ function User() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:8000/contactserver/getallmessages');
+        const response = await fetch('https://event-managment-admin-backend-1.onrender.com/contactserver/getallmessages');
         if (!response.ok) {
           throw new Error('Failed to fetch messages');
         }
@@ -30,7 +30,7 @@ function User() {
     setIsSending(true);
 
     try {
-      const response = await fetch('http://localhost:8000/contactserver/respond', {
+      const response = await fetch('https://event-managment-admin-backend-1.onrender.com/contactserver/respond', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: selectedMessage.email, response: userResponse })
